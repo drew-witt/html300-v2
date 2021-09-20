@@ -1,6 +1,15 @@
 // Import partials here
 @import 'base.normalize';
-@import 'settings.variables';
-@import 'settings.responsive';
+//@import 'settings.variables';
+@import 'units';
+@import 'fonts';
+@import 'color.palette';
+// Responsive
+@import 'grid';
+@import 'sections';
+@import 'header';
+// @import 'main';
+@import 'footer';
+@import 'media.queries';
+// Main structure
 @import 'components.content';
-

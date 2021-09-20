@@ -1,0 +1,61 @@
+// Fonts
+$xs-font: 1rem;
+$s-font: 1.5rem;
+$m-font: 2rem;
+$l-font: 3rem;
+$xl-font: 5rem;
+
+// Pixels
+$xl-pxl: 10px;
+$l-pxl: 8px;
+$m-pxl: 6px;
+$s-pxl: 4px;
+$xs-pxl: 3px;
+$xxs-pxl: 2px;
+$xxxs-pxl: 1px;
+
+// Rems
+$micro-pos-value: .10rem;
+$micro-neg-value: -0.10rem;
+$xxxxs-rem: .2rem;
+$xxxs-rem: .25rem;
+$xxs-rem: .5rem;
+$xs-rem: 1rem;
+$s-rem: 1.5rem;
+$m-rem: 2rem;
+$l-rem: 3rem;
+$lx-rem: 3.5rem;
+$xl-rem: 4rem;
+$v-rem: 5rem;
+$xxl-rem: 25rem;
+$xxxl-rem: 49.52rem;
+
+$header-rem: 10rem 0 8rem 0;
+
+
+@mixin block {
+    display: block;
+    margin: 0 auto;
+}
+
+// Percentages Widths & Heights
+@mixin full-x-y {
+    width: 100%;
+    height: 100%;
+}
+
+@mixin txt-align-slf {
+    text-align: center;
+    align-self: center;
+}
+
+@mixin full-x-fit-y {
+    width: 100%;
+    height: fit-content;
+}
+
+// Margin and padding set to 0
+@mixin mrgn-pdng-set-0 {
+    margin: 0;
+    padding: 0;
+}

@@ -1,5 +1,7 @@
+* ,
 html {
     box-sizing: border-box;
+    @include mrgn-pdng-set-0;
 }
 
 *,
@@ -8,6 +10,475 @@ html {
     box-sizing: inherit;
 }
 
-.main {
-    padding: 2rem;
+body {
+    @include mrgn-pdng-set-0;
+    @include full-x-fit-y;
+    font-size: $xs-font;
+    background-color: #f5731d;
+    color: $white;
+    line-height: $s-rem;
+    letter-spacing: $xxxxs-rem;
+}
+
+
+// Main Container
+.grid {
+    @include container;
+
+    // header
+    &__header {
+        // Media queries - full content _header.scss
+        @include header-responsive;
+
+
+        &__bg-img {
+            @include header-bg;
+        }
+        // H1 - logo
+        &__logo {
+            @include h1;
+            &:hover {
+                @include h1-hover;
+            }
+            // Media queries - full content _header.scss
+            @include logo-responsive;
+        }
+
+        // Ul - nav bar
+        &__list {
+            @include top-list;
+
+            // Media queries - full content _header.scss
+            @include h-list-responsive;
+
+            &.__show {
+                @include hmenu-show-responsive;
+            }
+
+            // list item 1
+            &--item1 {
+                @include top-navbar-item-1;
+            }
+
+            // list item 2
+            &--item2 {
+                @include top-navbar-item-2;
+            }
+
+            // list item 3
+            &--item3 {
+                @include top-navbar-item-3;
+            }
+
+            // list item 4
+            &--item4 {
+                @include top-navbar-item-4;
+            }
+            //
+        // navbar ends here
+        }
+    // header ends here
+    }
+
+
+    // Main area
+    &__main {
+        @include responsive(phone) {
+            @include main-mobile-tablet;
+        }
+        @include responsive(tablet) {
+            @include main-mobile-tablet;
+            width: 100%;
+        }
+        @include responsive(tabletLarge) {
+            @include main-tabletL-desktop;
+        }
+        @include responsive(tabletXLarge) {
+            @include main-tabletL-desktop;
+            width: 100%;
+        }
+        @include responsive(desktop) {
+            @include main-tabletL-desktop;
+            width: 100%;
+        }
+        @include responsive(desktopLarge) {
+            @include main-tabletL-desktop;
+            width: 100%;
+        }
+        // background-color: darkgreen;
+
+        // Section
+        &__section {
+            @include responsive(tablet) {
+                @include section-tablet;
+            }
+            @include responsive(tabletLarge) {
+                @include section-tabletLarge;
+            }
+            @include responsive(tabletXLarge) {
+                @include section-tabletXLarge;
+            }
+            @include responsive(desktop) {
+                @include section-desktop;
+                width: 100%;
+            }
+            @include responsive(desktopLarge) {
+                @include section-desktopL;
+                width: 100%;
+            }
+
+
+            // h2 section title
+            &__title {
+                font-family: $quotes-font;
+                margin: $m-rem 0;
+                font-size: $m-rem;
+                @include responsive(tablet) {
+                    grid-column: 4 / 7;
+                    grid-row: 1;
+                }
+
+                @include responsive(tabletLarge){
+                    grid-column: 4 / span 3;
+                    grid-row: 1;
+                    @include txt-align-slf;
+                    margin: $l-rem 0 0 0;
+                }
+                @include responsive(tabletXLarge) {
+                    grid-column: 5 / span 3;
+                    grid-row: 1;
+                    @include txt-align-slf;
+                    margin: $l-rem 0 0 0;
+                }
+                @include responsive(desktop) {
+                    // grid-column: 6 / span 2;
+                    grid-column: 5 / span 4;
+                    grid-row: 1;
+                    @include txt-align-slf;
+                    margin: $l-rem 0 0 0;
+                }
+                @include responsive(desktopLarge) {
+                    grid-column: 6 / span 4;
+                    grid-row: 1;
+                    @include txt-align-slf;
+                    margin: $l-rem 0 0 0;
+                }
+
+            }
+            // content wrap
+            // First Article
+            &__art1 {
+                &--image {
+                    width: 100%;
+                    object-fit: fill;
+                    border-radius: $s-pxl;
+                }
+
+                @include responsive(phone) {
+                    @include article-mobile-tablet;
+                }
+
+                @include responsive(tablet) {
+                    @include article-mobile-tablet;
+                    grid-column: 2 / 6;
+                    grid-row: 2;
+                }
+                @include responsive(tabletLarge) {
+                    grid-column: 2 / 6;
+                    grid-row: 2;
+                }
+                @include responsive(tabletXLarge) {
+                    grid-column: 5 / 8;
+                    grid-row: 2;
+                }
+                @include responsive(desktop) {
+                    grid-column: 5 / 12;
+                    grid-row: 2;
+                }
+                @include responsive(desktopLarge) {
+                    grid-column: 7 / 14;
+                    grid-row: 2;
+                }
+
+                // h4 article title
+                &--title {
+                    margin: $xxs-rem 0;
+                }
+                // Paragraph
+                &--text {
+                    font-family: $p-font;
+                    line-height: $m-rem;
+                }
+            // first article ends here
+            }
+
+            // Second article
+            &__art2 {
+                &--image {
+                    width: 100%;
+                    object-fit: fill;
+                    border-radius: $s-pxl;
+                }
+                @include responsive(phone) {
+                    @include article-mobile-tablet;
+                }
+                @include responsive(tablet) {
+                    @include article-mobile-tablet;
+                    grid-column: 6 / 9;
+                    grid-row: 2;
+                }
+                @include responsive(tabletLarge) {
+                    grid-column: 6 / 9;
+                    grid-row: 2;
+                }
+                @include responsive(tabletXLarge) {
+                    grid-column: 8 / 11;
+                    grid-row: 2;
+                }
+                @include responsive(desktop) {
+                    grid-column: 5 / 8;
+                    grid-row: 3;
+                }
+                @include responsive(desktopLarge) {
+                    grid-column: 8 / 13;
+                    grid-row: 3;
+                }
+
+                // h4 article title
+                &--title {
+                    margin: $xxs-rem 0;
+                }
+                // Paragraph
+                &--text {
+                    font-family: $p-font;
+                    line-height: $m-rem;
+                }
+            // second article ends here
+            }
+
+            // Third article
+            &__art3 {
+                &--image {
+                    width: 100%;
+                    object-fit: fill;
+                    border-radius: $s-pxl;
+                }
+                @include responsive(phone) {
+                    @include article-mobile-tablet;
+                }
+                @include responsive(tablet) {
+                    @include article-mobile-tablet;
+                    grid-column: 2 / 9;
+                    grid-row: 3;
+                }
+                @include responsive(tabletLarge) {
+                    grid-column: 2 / 9;
+                    grid-row: 3;
+                }
+                @include responsive(tabletXLarge) {
+                    grid-column: 5 / 11;
+                    grid-row: 3;
+                }
+                @include responsive(desktop) {
+                    grid-column: 8 / 12;
+                    grid-row: 3;
+                }
+                @include responsive(desktopLarge) {
+                    grid-column: 7 / 14;
+                    grid-row: 4;
+                }
+
+                // h4 article title
+                &--title {
+                    margin: $xxs-rem 0;
+                }
+                // Paragraph
+                &--text {
+                    font-family: $p-font;
+                    line-height: $m-rem;
+                }
+            // third article ends here
+            }
+
+            // Sidebar
+            // Aside
+                &__sidebar {
+
+                width: 100%;
+                @include responsive(phone) {
+                    @include article-mobile-tablet;
+                }
+                @include responsive(tablet) {
+                    grid-column: 2 / 9;
+                    grid-row: 4;
+                }
+                @include responsive(tabletLarge) {
+                    grid-column: 2 / 9;
+                    grid-row: 4;
+                }
+                @include responsive(tabletXLarge) {
+                    grid-column: 2 / 5;
+                    grid-row: 2 / 4;
+                }
+                @include responsive(desktop) {
+                    grid-column: 2 / 5;
+                    grid-row: 2 / span 2;
+                }
+                @include responsive(desktopLarge) {
+                    grid-column: 2 / 6;
+                    grid-row: 2 / span 3;
+                }
+            // h3 sidebar title
+             &--title {
+                margin: $m-rem 0;
+            }
+            &--img1 {
+                width: 50%;
+                object-fit: fill;
+                border-radius: 50%;
+
+            }
+
+            &--text {
+                margin: $m-rem 0;
+                font-family: $p-font;
+                line-height: $m-rem;
+                @include responsive(tabletXLarge) {
+                    &:last-child {
+                        display: none;
+                    }
+                }
+                @include responsive(desktop) {
+                    &:last-child {
+                        display: none;
+                    }
+                }
+            }
+            &--img2 {
+                width: 50%;
+                object-fit: fill;
+                border-radius: 50%;
+            }
+            &--img3 {
+                width: 50%;
+                object-fit: fill;
+                border-radius: 50%;
+            }
+            &--img4 {
+                width: 50%;
+                object-fit: fill;
+                border-radius: 50%;
+            }
+            &--img5 {
+                width: 50%;
+                object-fit: fill;
+                border-radius: 50%;
+                @include responsive(tabletXLarge) {
+                    display: none;
+                }
+                @include responsive(desktop) {
+                    display: none;
+                }
+            }
+
+        // aside ends here
+        }
+        // section ends here
+    }
+    // Main ends here
+    }
+
+
+    .footer {
+        @include fb-footer;
+        &__logo--footer {
+            @include logo-item;
+            @include logo--footer;
+            @include responsive(phone) {
+                padding-right: $m-rem;
+                padding-left: $m-rem;
+                line-height: $m-rem;
+            }
+        }
+
+        &__nav {
+            margin: $s-rem 0;
+            &__list {
+                @include list;
+                @include responsive(phone) {
+                    display: flex;
+                    flex-direction: column;
+                }
+                &--item {
+                    @include footer-list-item;
+                    @include responsive(phone) {
+                        margin-right: 0;
+                        margin-bottom: $xs-rem;
+                    }
+                    &::before  {
+                        @include footer-list-item-before;
+                    }
+                    &:hover::before{
+                        @include footer-list-item-hover-before;
+                    }
+                }
+
+                &--item:last-child {
+                    margin-right: 0;
+                }
+
+                &--item::after {
+                    @include footer-list-item-after;
+                    @include responsive(phone) {
+                        display: none;
+                    }
+                }
+
+                &--item:last-of-type::after {
+                    display: none;
+                }
+
+                &--item--anchor {
+                    color: $platinum;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        &__fa {
+            @include fa;
+        }
+
+        .fab:first-child {
+            @include sm-hover;
+            &:hover {
+                color: $facebook;
+            }
+        }
+
+        .fab:nth-child(2) {
+            @include sm-hover;
+            &:hover {
+                color: $instagram;
+            }
+        }
+
+        .fab:nth-child(3) {
+            @include sm-hover;
+            &:hover {
+                color: $pinterest;
+            }
+        }
+
+        .fab:last-child {
+            @include sm-hover;
+            &:hover {
+                color: $twitter;
+            }
+        }
+
+        & small {
+            @include copy-info;
+        }
+    }
 }

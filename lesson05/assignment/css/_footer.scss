@@ -1,0 +1,102 @@
+// Flexbox footer
+@mixin fb-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include full-x-fit-y;
+    background-image: url(../images/CabbageHands.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+// Global logo settings
+@mixin logo-item {
+    font-family: $logo-btn-font;
+    text-decoration: none;
+    color: $white;
+    cursor: pointer;
+    letter-spacing: $xl-pxl;
+    align-self: center;
+}
+
+// logo footer
+@mixin logo--footer {
+    width: 100%;
+    color: $lightgray;
+    margin-top: $l-rem;
+    margin-bottom: $xs-rem;
+    text-align: center;
+    font-size: $m-font;
+    text-shadow: $xxxs-rem $xxxs-rem 0 $shadow-logo;
+    }
+}
+
+@mixin list {
+    display: inline-flex;
+    list-style-type: none;
+    font-family: $nav-list-font;
+    font-size: $xs-font;
+}
+
+@mixin footer-list-item {
+    margin-right: $l-rem;
+    letter-spacing: $xs-pxl;
+    // Hover underlined effect
+    position: relative;
+}
+
+@mixin footer-list-item-before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: $xs-pxl;
+    background-color: #0074D9;
+    transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@mixin footer-list-item-hover-before {
+    left: 0;
+    right: auto;
+    width: 100%;
+}
+
+@mixin footer-list-item-after {
+    content: "/";
+    color: $silver;
+    font-size: $xs-font;
+    position: absolute;
+    margin-left: $s-rem;
+}
+
+// Font awesome global
+@mixin fa {
+    margin: $s-rem 0;
+    color: $platinum;
+    font-size: $s-font;
+
+    &::before {
+        margin-right: $m-rem;
+    }
+    &:last-of-type::before {
+         margin-right: 0;
+    }
+}
+
+// Social media icons 'hover'
+@mixin sm-hover {
+    transition: all 150ms ease-in-out;
+    &:hover {
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
+
+// Copyright info
+@mixin copy-info {
+    margin: 0 0 $s-rem 0;
+    letter-spacing: $m-pxl;
+    font-family: $small-ital-font;
+}
