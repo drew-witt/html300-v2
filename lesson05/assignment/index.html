@@ -4,12 +4,104 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="./css/style.css" />
         <title>Assignment 05 - CSS Grid</title>
+        <script src="https://kit.fontawesome.com/4e12779179.js" crossorigin="anonymous"></script>
+        <script src="./script.js"></script>
     </head>
     <body>
-        <main class="main">
-          
-        </main>
+        <div class="grid">
+            <header id="showcase" class="grid__header">
+                <div class="grid__header__bg-img">
+                    <h1 class="grid__header__logo">Cabbage</h1>
+
+                        <ul class="grid__header__list" id="nav-ul">
+                            <li class="grid__header__list--item1">
+                                <a class="grid__header__list--item1--anchor1" href="#homepage">Home - Logo</a>
+                            </li>
+                            <li class="grid__header__list--item2">
+                                <a class="grid__header__list--item2--anchor2" href="#homepage">Pricing</a>
+                            </li>
+                            <li class="grid__header__list--item3">
+                                <a class="grid__header__list--item3--anchor3" href="#homepage">Benefits</a>
+                            </li>
+                            <li class="grid__header__list--item4">
+                                <a class="grid__header__list--item4--anchor4" href="#homepage">Nutrition</a>
+                            </li>
+                            <li class="grid__header__list--item5">
+                                <a class="grid__header__list--item5--anchor5" href="#homepage">Buy Now</a>
+                            </li>
+                        </ul>
+
+                </div>
+            </header>
+
+            <!-- Main area -->
+            <main class="grid__main" id="main">
+                <section class="grid__main__section">
+                    <h2 class="grid__main__section__title">Sometimes Sweet, Sometimes Tart. Always Nutritious and Delicious.</h2>
+                        <!-- content wrap -->
+                        <article class="grid__main__section__art1">
+                            <img class="grid__main__section__art1--image" src="./images/CabbageHands.jpg" alt="Overhead image of a cabbage in the ground, with hands placed around the head.">
+                            <h4 class="grid__main__section__art1--title">Buy Now</h4>
+                                <p class="grid__main__section__art1--text">Cabbage is one of the most popular vegetables in the world for a reason</p>
+                        </article>
+                        <!-- content wrap -->
+                        <article class="grid__main__section__art2">
+                            <img class="grid__main__section__art2--image" src="./images/CabbagePile.jpg" alt="Dozens of beautiful cabbages in a pile take up the entirety of the image.">
+                            <h4 class="grid__main__section__art2--title">Benefits</h4>
+                                <p class="grid__main__section__art2--text">There is plenty of reasons to choose Cabbage</p>
+                        </article>
+                        <!-- content wrap -->
+                        <article class="grid__main__section__art3">
+                            <img class="grid__main__section__art3--image" src="./images/CabbageRoll.jpg" alt="Delicious cabbage rolls grace a plate on a table.">
+                            <h4 class="grid__main__section__art3--title">Get Started</h4>
+                                <p class="grid__main__section__art3--text">Ready for Cabbage to change your life?</p>
+                        </article>
+
+                        <!-- Sidebar -->
+                        <aside class="grid__main__section__sidebar">
+                            <h4 class="grid__main__section__sidebar--title"></h4>
+                                <img class="grid__main__section__sidebar--img1" src="./images/CabbageHalf.jpg" alt="testimonial number one">
+                                <p class="grid__main__section__sidebar--text"> "Ever since becoming a daily user of Cabbage I've never felt healthier! My life is so much better with Cabbage in it and I could never imagine going back."</p>
+                                <img class="grid__main__section__sidebar--img2" src="./images/CabbageLeaf.jpg" alt="testimonial number two">
+                                <p class="grid__main__section__sidebar--text"> "Ever since becoming a daily user of Cabbage I've never felt healthier! My life is so much better with Cabbage in it and I could never imagine going back."</p>
+                                <img class="grid__main__section__sidebar--img3" src="./images/NappaCabbage.jpg" alt="testimonial number three">
+                                <p class="grid__main__section__sidebar--text"> "Ever since becoming a daily user of Cabbage I've never felt healthier! My life is so much better with Cabbage in it and I could never imagine going back."</p>
+                                <img class="grid__main__section__sidebar--img4" src="./images/PlainCabbage.jpg" alt="testimonial number four">
+                                <p class="grid__main__section__sidebar--text"> "Ever since becoming a daily user of Cabbage I've never felt healthier! My life is so much better with Cabbage in it and I could never imagine going back."</p>
+                                <img class="grid__main__section__sidebar--img5" src="./images/RedCabbage.jpg" alt="testimonial number five">
+                                <p class="grid__main__section__sidebar--text"> "Ever since becoming a daily user of Cabbage I've never felt healthier! My life is so much better with Cabbage in it and I could never imagine going back."</p>
+                        </aside>
+                </section>
+            </main>
+
+            <!-- Footer -->
+            <footer id="footer" class="footer">
+                <h3 class="footer__logo--footer">Cabbage</h3>
+                  <nav class="footer__nav">
+                    <ul class="footer__nav__list">
+                      <li class="footer__nav__list--item">
+                        <a class="footer__nav__list--item--anchor" href="#header">Blog</a></li>
+                      <li class="footer__nav__list--item">
+                        <a class="footer__nav__list--item--anchor" href="#header">Resources</a></li>
+                      <li class="footer__nav__list--item">
+                        <a class="footer__nav__list--item--anchor" href="#header">Team</a></li>
+                      <li class="footer__nav__list--item">
+                        <a class="footer__nav__list--item--anchor" href="#header">Careers</a></li>
+                      <li class="footer__nav__list--item">
+                        <a class="footer__nav__list--item--anchor" href="#header">Contact</a></li>
+                    </ul>
+                  </nav>
+                <div class="footer__fa">
+                  <i class="footer__fa fab fa-facebook"></i>
+                  <i class="footer__fa fab fa-instagram"></i>
+                  <i class="footer__fa fab fa-pinterest"></i>
+                  <i class="footer__fa fab fa-twitter"></i>
+                </div>
+                <small>&copy; 2021 The Cabbage Corp</small>
+              </footer>
+        </div>
+
     </body>
 </html>
