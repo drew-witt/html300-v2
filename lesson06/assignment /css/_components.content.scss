@@ -1,0 +1,37 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+.main {
+    padding: 2rem;
+}
+
+nav {
+  &__ul {
+    &--li {
+      font-size: 5em;
+    }
+  }
+}
+
+// add background to div on homepage
+.home-background {
+  width: auto;
+  height: 100%;
+  padding: 13em;
+  background-image: url("../images/CabbagePile.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6;
+}
+
+.company-name, .company-quote {
+  border: 5px solid white;
+  border-radius: 8px;
+}

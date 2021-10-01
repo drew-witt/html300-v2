@@ -4,12 +4,29 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css" />
         <title>Assignment 06 - Bootstrap 4</title>
     </head>
     <body>
-        <main class="main">
-          
-        </main>
+      <main class="main">
+        <!-- Use list-inline and list-inline-item to create non-decorated nav links inline -->
+        <nav class="navbar nav">
+          <ul class="list-inline nav__ul">
+            <li class="list-inline-item nav__ul--li"><a href="index.html">Logo - Home</a></li>
+            <li class="list-inline-item nav__ul--li"><a href="how-to.html">How-To</a></li>
+            <li class="list-inline-item nav__ul--li"><a href="know-your-cabbage.html">Know Your Cabbage</a></li>
+            <li class="list-inline-item nav__ul--li"><a href="recipe-search.html">Recipe Search</a></li>
+          </ul>
+        </nav>
+        <!-- Include dive to allow for background image in css -->
+        <div class="home-background m-0">
+          <h1 class="company-name display-3 mt-3 p-2 bg-light text-body text-center">Cabbage</h1>
+          <h4 class="company-quote bg-light text-dark text-center p-2"><em>Sometimes Sweet, Sometimes Tart. Always Nutritious and Delicious.</em></h4>
+        </div>
+      </main>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
 </html>
